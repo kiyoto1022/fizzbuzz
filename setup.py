@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(
     name='fizz_buzz',
@@ -9,5 +8,6 @@ setup(
     author='Kiyoto Akiyama',
     author_email='kiyoto@akiyama.co',
     url='https://github.com/kiyoto1022/fizzbuzz',
-    packages=['fizz_buzz']
+    packages = find_packages(exclude=('tests')),
+    test_suite = 'tests'
 )
