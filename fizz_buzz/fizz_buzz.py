@@ -19,8 +19,13 @@ class FizzBuzz:
             return True
         return False
 
-    def __judge(self, num):
+    def __is_fizz_buzz(self, num):
         if self.__is_fizz(num) and self.__is_buzz(num):
+            return True
+        return False
+
+    def __judge(self, num):
+        if self.__is_fizz_buzz(num):
             return "FizzBuzz"
         if self.__is_fizz(num):
             return "Fizz"
